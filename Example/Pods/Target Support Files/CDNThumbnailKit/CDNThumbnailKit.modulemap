@@ -1,0 +1,6 @@
+framework module CDNThumbnailKit {
+  umbrella header "CDNThumbnailKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

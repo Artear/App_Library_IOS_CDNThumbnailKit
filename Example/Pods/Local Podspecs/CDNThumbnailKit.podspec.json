@@ -1,0 +1,22 @@
+{
+  "name": "CDNThumbnailKit",
+  "version": "0.1.0",
+  "summary": "A short description of CDNThumbnailKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jsagredo.ing@gmail.com/CDNThumbnailKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jsagredo.ing@gmail.com": "jsagredo.ing@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/jsagredo.ing@gmail.com/CDNThumbnailKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CDNThumbnailKit/Classes/**/*"
+}

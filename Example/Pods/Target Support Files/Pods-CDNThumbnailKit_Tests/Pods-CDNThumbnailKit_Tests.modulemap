@@ -1,0 +1,6 @@
+framework module Pods_CDNThumbnailKit_Tests {
+  umbrella header "Pods-CDNThumbnailKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
