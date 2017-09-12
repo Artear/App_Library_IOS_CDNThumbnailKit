@@ -7,12 +7,35 @@
 //
 
 import UIKit
+import CDNThumbnailKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let images:[String] = [
+            "http://vodgc.com/p/107/sp/10700/thumbnail/entry_id/0_4ucbsbhf/width/375/height/212/type/2/bgcolor/000000",
+            "http://vodgc.com/p/107/sp/10700/thumbnail/entry_id/0_cp9nzqzy",
+            "https://vignette.wikia.nocookie.net/rockosmodernlife/images/5/5e/Rocko_Wallaby.png"
+        ]
+        
+        var count = 0
+        for image in images {
+            count+=1
+            print("Image \(count)")
+            let urlOne = URL(string: image)!
+            let imageOne = CDNImage(url: urlOne)
+            
+            print("[   IMAGE   ]> \(imageOne.getURL())")
+            print("[  ORIGIAL  ]> \(imageOne.getURL(original: true))")
+            print("[   96X96   ]> \(imageOne.getURL(thumbnail: CDNThumbnail(width: 96, height: 96, type: .center) ))")
+            
+            print("")
+        }
+
+        
     }
 
     override func didReceiveMemoryWarning() {

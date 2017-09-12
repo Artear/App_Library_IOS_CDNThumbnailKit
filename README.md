@@ -1,9 +1,8 @@
 # CDNThumbnailKit
 
-[![CI Status](http://img.shields.io/travis/jsagredo.ing@gmail.com/CDNThumbnailKit.svg?style=flat)](https://travis-ci.org/jsagredo.ing@gmail.com/CDNThumbnailKit)
-[![Version](https://img.shields.io/cocoapods/v/CDNThumbnailKit.svg?style=flat)](http://cocoapods.org/pods/CDNThumbnailKit)
-[![License](https://img.shields.io/cocoapods/l/CDNThumbnailKit.svg?style=flat)](http://cocoapods.org/pods/CDNThumbnailKit)
-[![Platform](https://img.shields.io/cocoapods/p/CDNThumbnailKit.svg?style=flat)](http://cocoapods.org/pods/CDNThumbnailKit)
+[![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
+[![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
+[![Language: Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg)](https://swift.org)
 
 ## Example
 

@@ -15,6 +15,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B38B098736AC7E36CD89D563 /* Pods_CDNThumbnailKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73CB4DFC60ED962C850FF9A /* Pods_CDNThumbnailKit_Example.framework */; };
+		E1FAE2621F689BB4006C01B0 /* CDNKalturaThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAE2611F689BB4006C01B0 /* CDNKalturaThumbnail.swift */; };
+		E1FAE2641F689BD7006C01B0 /* CDNThumbnailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAE2631F689BD7006C01B0 /* CDNThumbnailList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,8 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		168156819F05955337A54D0F /* CDNThumbnailKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CDNThumbnailKit.podspec; path = ../CDNThumbnailKit.podspec; sourceTree = "<group>"; };
-		180B99531B9C2ACF3C54A929 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		168156819F05955337A54D0F /* CDNThumbnailKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CDNThumbnailKit.podspec; path = ../CDNThumbnailKit.podspec; sourceTree = "<group>"; };
+		180B99531B9C2ACF3C54A929 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		52D18EA07C1654D6A327884F /* Pods_CDNThumbnailKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDNThumbnailKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* CDNThumbnailKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDNThumbnailKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +46,9 @@
 		6BBEA1BB09F08103F43F0EFB /* Pods-CDNThumbnailKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Example/Pods-CDNThumbnailKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		772679F5C2C8029774681F34 /* Pods-CDNThumbnailKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Tests/Pods-CDNThumbnailKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		874C625384874896B7AA24E6 /* Pods-CDNThumbnailKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Example/Pods-CDNThumbnailKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B0DA273E0F673FD3F3890FCE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B0DA273E0F673FD3F3890FCE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E1FAE2611F689BB4006C01B0 /* CDNKalturaThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNKalturaThumbnail.swift; sourceTree = "<group>"; };
+		E1FAE2631F689BD7006C01B0 /* CDNThumbnailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNThumbnailList.swift; sourceTree = "<group>"; };
 		E73CB4DFC60ED962C850FF9A /* Pods_CDNThumbnailKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDNThumbnailKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9856D2C5433D578CC81752A /* Pods-CDNThumbnailKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Tests/Pods-CDNThumbnailKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +97,7 @@
 		607FACD21AFB9204008FA782 /* Example for CDNThumbnailKit */ = {
 			isa = PBXGroup;
 			children = (
+				E1FAE25F1F689B93006C01B0 /* CDNThumbnail */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -157,6 +162,23 @@
 				52D18EA07C1654D6A327884F /* Pods_CDNThumbnailKit_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1FAE25F1F689B93006C01B0 /* CDNThumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				E1FAE2601F689B93006C01B0 /* Kaltura */,
+				E1FAE2631F689BD7006C01B0 /* CDNThumbnailList.swift */,
+			);
+			path = CDNThumbnail;
+			sourceTree = "<group>";
+		};
+		E1FAE2601F689B93006C01B0 /* Kaltura */ = {
+			isa = PBXGroup;
+			children = (
+				E1FAE2611F689BB4006C01B0 /* CDNKalturaThumbnail.swift */,
+			);
+			path = Kaltura;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				E1FAE2621F689BB4006C01B0 /* CDNKalturaThumbnail.swift in Sources */,
+				E1FAE2641F689BD7006C01B0 /* CDNThumbnailList.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

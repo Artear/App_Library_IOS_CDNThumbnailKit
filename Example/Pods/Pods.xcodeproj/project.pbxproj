@@ -13,10 +13,14 @@
 		4ACFB0C95282EBC2EDF390BBCFF053BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		6184ECACA38EE25B0CBEEF91BF5A5323 /* Pods-CDNThumbnailKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D31C333E5CD6D28DCA9676E0C101A698 /* Pods-CDNThumbnailKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A3DF3FE0BFB6C6DF9E1A884C57AD640 /* Pods-CDNThumbnailKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5D7F699F77CCBA2BE47706827775A2 /* Pods-CDNThumbnailKit_Example-dummy.m */; };
-		8C5518D7317A434274B9510A79B186C9 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C85E8D6627E791543E77A93AFBDB14 /* ReplaceMe.swift */; };
 		A69E5DCA69859BC979B5BE0543022C9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		D0743C68B6471F1F6C42D77F8AC26ED6 /* Pods-CDNThumbnailKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E59AADB52407E189156A8634F1CFC28 /* Pods-CDNThumbnailKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD2E3C3523A78B7EB2E7A423A3774392 /* Pods-CDNThumbnailKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAA73D77F27162D794FBB8FA21F32A /* Pods-CDNThumbnailKit_Tests-dummy.m */; };
+		E1FAE2551F689990006C01B0 /* CDNThumbnailKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAE2541F689990006C01B0 /* CDNThumbnailKit.swift */; };
+		E1FAE2571F6899C7006C01B0 /* CDNThumbnailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAE2561F6899C7006C01B0 /* CDNThumbnailProtocol.swift */; };
+		E1FAE2591F6899DF006C01B0 /* CDNThumbnailDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAE2581F6899DF006C01B0 /* CDNThumbnailDefault.swift */; };
+		E1FAE25C1F689A7B006C01B0 /* CDNImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAE25B1F689A7B006C01B0 /* CDNImage.swift */; };
+		E1FAE25E1F689AA0006C01B0 /* CDNThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAE25D1F689AA0006C01B0 /* CDNThumbnail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +36,7 @@
 /* Begin PBXFileReference section */
 		059049912F246BBDCC1BBB141B9306D7 /* Pods-CDNThumbnailKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDNThumbnailKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		10A9D6514F919A0A57CF4ECB96D789FB /* CDNThumbnailKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDNThumbnailKit-dummy.m"; sourceTree = "<group>"; };
-		1ADBA9EF7E50EDEC1B680129D24133B8 /* CDNThumbnailKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CDNThumbnailKit.modulemap; sourceTree = "<group>"; };
+		1ADBA9EF7E50EDEC1B680129D24133B8 /* CDNThumbnailKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CDNThumbnailKit.modulemap; sourceTree = "<group>"; };
 		1B22C3FB218C7A8CC729F53CBBF066F8 /* Pods-CDNThumbnailKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDNThumbnailKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		28212A07DBFBF91C98CC7EC4756CAC3F /* Pods-CDNThumbnailKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDNThumbnailKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		282EF5C673E1EC60FF017F56A5482A83 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,26 +45,30 @@
 		42160B10895AFF9DD7A02872C8E297C9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4960E729D8151D2D90DA4E2DE16CCCC5 /* CDNThumbnailKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDNThumbnailKit-prefix.pch"; sourceTree = "<group>"; };
 		499D14172A3DE281883A0A0D064EB203 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A419F174732FC98A8AD8E9090AA8AA7 /* Pods-CDNThumbnailKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CDNThumbnailKit_Example.modulemap"; sourceTree = "<group>"; };
+		4A419F174732FC98A8AD8E9090AA8AA7 /* Pods-CDNThumbnailKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CDNThumbnailKit_Example.modulemap"; sourceTree = "<group>"; };
 		4E59AADB52407E189156A8634F1CFC28 /* Pods-CDNThumbnailKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDNThumbnailKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		5FB4F5C34CB63A99667FD8118F09BE2D /* Pods-CDNThumbnailKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDNThumbnailKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		654964620CF5122C1CABFA142D76BF3E /* CDNThumbnailKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDNThumbnailKit.xcconfig; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		70FAA73D77F27162D794FBB8FA21F32A /* Pods-CDNThumbnailKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CDNThumbnailKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		7575632E75F7866A517CE966032DA5C7 /* Pods-CDNThumbnailKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDNThumbnailKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		7A0295D169EA712FA6FB172436B48E92 /* Pods_CDNThumbnailKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CDNThumbnailKit_Example.framework; path = "Pods-CDNThumbnailKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A0295D169EA712FA6FB172436B48E92 /* Pods_CDNThumbnailKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDNThumbnailKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5D7F699F77CCBA2BE47706827775A2 /* Pods-CDNThumbnailKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CDNThumbnailKit_Example-dummy.m"; sourceTree = "<group>"; };
 		7F1944BAE0652C965AA2BAAAB5FF3F94 /* Pods-CDNThumbnailKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDNThumbnailKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		809BC93E9F8164FCD2F923600D01EE5E /* CDNThumbnailKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CDNThumbnailKit.framework; path = CDNThumbnailKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82B7A2212F25A9E5B3845BD451F3F7FA /* Pods_CDNThumbnailKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CDNThumbnailKit_Tests.framework; path = "Pods-CDNThumbnailKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		809BC93E9F8164FCD2F923600D01EE5E /* CDNThumbnailKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CDNThumbnailKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82B7A2212F25A9E5B3845BD451F3F7FA /* Pods_CDNThumbnailKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDNThumbnailKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		858F54916327AB6FD4ECEBA08626E201 /* Pods-CDNThumbnailKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDNThumbnailKit_Example-resources.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98C85E8D6627E791543E77A93AFBDB14 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
-		A0CC5AF801EAD9A1C98807CD62735EB5 /* Pods-CDNThumbnailKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CDNThumbnailKit_Tests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0CC5AF801EAD9A1C98807CD62735EB5 /* Pods-CDNThumbnailKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CDNThumbnailKit_Tests.modulemap"; sourceTree = "<group>"; };
 		A96832A3C5CFF2984AF9693658309BE9 /* Pods-CDNThumbnailKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDNThumbnailKit_Tests-resources.sh"; sourceTree = "<group>"; };
 		AD9EA73F1571FF7A4FA60C1A5BEC6193 /* CDNThumbnailKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDNThumbnailKit-umbrella.h"; sourceTree = "<group>"; };
 		D31C333E5CD6D28DCA9676E0C101A698 /* Pods-CDNThumbnailKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDNThumbnailKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		D703ED3041F0492ACD45E0BC78F06F2E /* Pods-CDNThumbnailKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDNThumbnailKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E1FAE2541F689990006C01B0 /* CDNThumbnailKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNThumbnailKit.swift; sourceTree = "<group>"; };
+		E1FAE2561F6899C7006C01B0 /* CDNThumbnailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNThumbnailProtocol.swift; sourceTree = "<group>"; };
+		E1FAE2581F6899DF006C01B0 /* CDNThumbnailDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNThumbnailDefault.swift; sourceTree = "<group>"; };
+		E1FAE25B1F689A7B006C01B0 /* CDNImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNImage.swift; sourceTree = "<group>"; };
+		E1FAE25D1F689AA0006C01B0 /* CDNThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNThumbnail.swift; sourceTree = "<group>"; };
 		FF5830D27C9DB3707D531D6F51883DC3 /* Pods-CDNThumbnailKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDNThumbnailKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +105,6 @@
 			children = (
 				30F440677BAD7C11C501034E31C1CB00 /* Classes */,
 			);
-			name = CDNThumbnailKit;
 			path = CDNThumbnailKit;
 			sourceTree = "<group>";
 		};
@@ -118,9 +125,11 @@
 		30F440677BAD7C11C501034E31C1CB00 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				98C85E8D6627E791543E77A93AFBDB14 /* ReplaceMe.swift */,
+				E1FAE25A1F689A71006C01B0 /* CDNImage */,
+				E1FAE2541F689990006C01B0 /* CDNThumbnailKit.swift */,
+				E1FAE2561F6899C7006C01B0 /* CDNThumbnailProtocol.swift */,
+				E1FAE2581F6899DF006C01B0 /* CDNThumbnailDefault.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -222,6 +231,15 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E1FAE25A1F689A71006C01B0 /* CDNImage */ = {
+			isa = PBXGroup;
+			children = (
+				E1FAE25B1F689A7B006C01B0 /* CDNImage.swift */,
+				E1FAE25D1F689AA0006C01B0 /* CDNThumbnail.swift */,
+			);
+			path = CDNImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,7 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				091BE09DA2319D1199AC497E184D1A75 /* CDNThumbnailKit-dummy.m in Sources */,
-				8C5518D7317A434274B9510A79B186C9 /* ReplaceMe.swift in Sources */,
+				E1FAE2571F6899C7006C01B0 /* CDNThumbnailProtocol.swift in Sources */,
+				E1FAE25E1F689AA0006C01B0 /* CDNThumbnail.swift in Sources */,
+				E1FAE25C1F689A7B006C01B0 /* CDNImage.swift in Sources */,
+				E1FAE2591F6899DF006C01B0 /* CDNThumbnailDefault.swift in Sources */,
+				E1FAE2551F689990006C01B0 /* CDNThumbnailKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
