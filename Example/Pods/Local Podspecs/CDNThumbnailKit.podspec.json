@@ -1,18 +1,14 @@
 {
   "name": "CDNThumbnailKit",
   "version": "0.1.0",
-  "summary": "A short description of CDNThumbnailKit.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/jsagredo.ing@gmail.com/CDNThumbnailKit",
-  "license": {
-    "type": "MIT",
-    "file": "LICENSE"
-  },
+  "license": "MIT",
+  "summary": "Thumbnail Strategy for multi content delivery network",
+  "homepage": "https://github.com/Artear/App_Library_IOS_CDNThumbnailKit",
   "authors": {
-    "jsagredo.ing@gmail.com": "jsagredo.ing@gmail.com"
+    "Jose Luis Sagredo Pedraza": "jsagredo.ing@gmail.com"
   },
   "source": {
-    "git": "https://github.com/jsagredo.ing@gmail.com/CDNThumbnailKit.git",
+    "git": "https://github.com/Artear/App_Library_IOS_CDNThumbnailKit.git",
     "tag": "0.1.0"
   },
   "platforms": {
