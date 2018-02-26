@@ -9,9 +9,12 @@ import Foundation
 
 public class CDNStrategyDefault: CDNStrategyProtocol {
 
-    private var cdnList: [CDNThumbnail]
     
-    init() {
+    private var cdnList: [CDNThumbnail]
+    private var screenScale = UIScreen.main.scale
+    
+    
+    public init() {
         self.cdnList = [CDNThumbnail]()
     }
     
@@ -31,7 +34,7 @@ public class CDNStrategyDefault: CDNStrategyProtocol {
             var bestWidthDiff = Int.max
             
             for cdn in self.cdnList{
-                let diff = Int.abs(cdn.width - width)
+                let diff = Int.abs(cdn.width - width * Int(screenScale))
                 if diff < bestWidthDiff{
                     bestWidthDiff = diff
                     returns = cdn
