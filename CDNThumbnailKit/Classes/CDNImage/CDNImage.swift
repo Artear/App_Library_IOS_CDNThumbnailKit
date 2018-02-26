@@ -24,8 +24,12 @@ public class CDNImage: NSObject {
         return self.url
     }
     
-    public func getURL(thumbnail:CDNThumbnail) -> URL {
+    public func getURL(thumbnail:CDNThumbnail?) -> URL {
+        if thumbnail == nil{
+            return self.getURL(original: false)
+        }
         return self.cdn.thumbnail(image: self.url, thumbnail: thumbnail)
+
     }
     
 }
