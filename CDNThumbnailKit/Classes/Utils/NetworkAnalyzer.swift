@@ -21,14 +21,14 @@ public class NetworkAnalyzer {
         case _2G
         case _Unknow
     }
-    
+
     public func checkType() ->TelephonyNetwork {
         let netInfo = CTTelephonyNetworkInfo()
-        
+
         guard let connection = netInfo.currentRadioAccessTechnology else {
             return ._Unknow
         }
-        
+
         switch connection {
         case CTRadioAccessTechnologyGPRS,
              CTRadioAccessTechnologyEdge,
@@ -46,12 +46,13 @@ public class NetworkAnalyzer {
             return ._LTE
         default:
             return ._Unknow
-            
+
         }
     }
-    
+
     public func getRechabilityStatus() -> Reachability.Connection{
         return self.reachability.connection
     }
 
 }
+
