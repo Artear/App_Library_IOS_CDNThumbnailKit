@@ -11,13 +11,8 @@ public class CDNStrategyConnection: CDNStrategyDefault {
     
     public override func getCDNThumbnail(width: Int, height: Int) -> CDNThumbnail? {
         var returns : CDNThumbnail?
-
-        returns = super.getCDNThumbnail(width: width, height: height)
-        if (returns != nil) {
-            let size = self.getConnectionSize(width: returns!.width , height: returns!.height)
-            returns!.height = Int(size.height)
-            returns!.width = Int(size.width)
-        }
+        let size = self.getConnectionSize(width: width , height: height)
+        returns = super.getCDNThumbnail(width: Int(size.width), height: Int(size.height))
         return returns
     }
 
