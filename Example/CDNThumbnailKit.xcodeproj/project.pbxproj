@@ -14,6 +14,10 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		B38B098736AC7E36CD89D563 /* Pods_CDNThumbnailKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73CB4DFC60ED962C850FF9A /* Pods_CDNThumbnailKit_Example.framework */; };
+		E160916F20600FCC006CA37A /* CDNKalturaThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160916E20600FCC006CA37A /* CDNKalturaThumbnail.swift */; };
+		E160917120600FE0006CA37A /* CDNArtearThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160917020600FE0006CA37A /* CDNArtearThumbnail.swift */; };
+		E1609172206013AE006CA37A /* CDNArtearThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160917020600FE0006CA37A /* CDNArtearThumbnail.swift */; };
+		E1609174206027FA006CA37A /* CDNThumbnailKitSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1609173206027FA006CA37A /* CDNThumbnailKitSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,9 @@
 		772679F5C2C8029774681F34 /* Pods-CDNThumbnailKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Tests/Pods-CDNThumbnailKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		874C625384874896B7AA24E6 /* Pods-CDNThumbnailKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Example/Pods-CDNThumbnailKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B0DA273E0F673FD3F3890FCE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E160916E20600FCC006CA37A /* CDNKalturaThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNKalturaThumbnail.swift; sourceTree = "<group>"; };
+		E160917020600FE0006CA37A /* CDNArtearThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDNArtearThumbnail.swift; sourceTree = "<group>"; };
+		E1609173206027FA006CA37A /* CDNThumbnailKitSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDNThumbnailKitSpec.swift; sourceTree = "<group>"; };
 		E73CB4DFC60ED962C850FF9A /* Pods_CDNThumbnailKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDNThumbnailKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9856D2C5433D578CC81752A /* Pods-CDNThumbnailKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Tests/Pods-CDNThumbnailKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				E1609173206027FA006CA37A /* CDNThumbnailKitSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -160,6 +168,8 @@
 		E1FAE25F1F689B93006C01B0 /* CDNThumbnail */ = {
 			isa = PBXGroup;
 			children = (
+				E160916E20600FCC006CA37A /* CDNKalturaThumbnail.swift */,
+				E160917020600FE0006CA37A /* CDNArtearThumbnail.swift */,
 			);
 			path = CDNThumbnail;
 			sourceTree = "<group>";
@@ -328,10 +338,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CDNThumbnailKit_Example/Pods-CDNThumbnailKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CDNThumbnailKit/CDNThumbnailKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDNThumbnailKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -344,9 +356,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CDNThumbnailKit_Tests/Pods-CDNThumbnailKit_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -376,7 +393,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				E160916F20600FCC006CA37A /* CDNKalturaThumbnail.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				E160917120600FE0006CA37A /* CDNArtearThumbnail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +403,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1609174206027FA006CA37A /* CDNThumbnailKitSpec.swift in Sources */,
+				E1609172206013AE006CA37A /* CDNArtearThumbnail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +570,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDNThumbnailKit_Example.app/CDNThumbnailKit_Example";
 			};
 			name = Debug;
 		};
@@ -565,6 +587,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDNThumbnailKit_Example.app/CDNThumbnailKit_Example";
 			};
 			name = Release;
 		};
