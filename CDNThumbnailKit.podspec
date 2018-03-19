@@ -8,4 +8,6 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/Artear/App_Library_IOS_CDNThumbnailKit.git', :tag => s.version }
   s.ios.deployment_target = '8.0'
   s.source_files = 'CDNThumbnailKit/Classes/**/*'
+
+  s.dependency 'ReachabilitySwift'
 end

@@ -21,12 +21,18 @@ class ViewController: UIViewController {
             "https://vignette.wikia.nocookie.net/rockosmodernlife/images/5/5e/Rocko_Wallaby.png"
         ]
         
-        let cdnStrategy = CDNStrategyDefault()
-        cdnStrategy.add(cdnThumbnail: CDNThumbnail(width: 96, height: 96, type: .center, params: nil))
-        cdnStrategy.add(cdnThumbnail: CDNThumbnail(width: 200, height: 200, type: .center, params: nil))
-        cdnStrategy.add(cdnThumbnail: CDNThumbnail(width: 300, height: 300, type: .center, params: nil))
-        cdnStrategy.add(cdnThumbnail: CDNThumbnail(width: 300, height: 96, type: .center, params: nil))
+        let squareStrategy = CDNStrategyConnection()
+        squareStrategy.add(cdnThumbnail: CDNThumbnail(width: 96, height: 96, type: .center, params: nil))
+        squareStrategy.add(cdnThumbnail: CDNThumbnail(width: 200, height: 200, type: .center, params: nil))
+        squareStrategy.add(cdnThumbnail: CDNThumbnail(width: 300, height: 300, type: .center, params: nil))
 
+        
+        let wideStrategy = CDNStrategyConnection()
+        wideStrategy.add(cdnThumbnail: CDNThumbnail(width: 300, height: 96, type: .center, params: nil))
+        wideStrategy.add(cdnThumbnail: CDNThumbnail(width: 320, height: 180, type: .center, params: nil))
+        wideStrategy.add(cdnThumbnail: CDNThumbnail(width: 650, height: 365, type: .center, params: nil))
+        
+        
         var count = 0
         for image in images {
             count+=1
@@ -36,7 +42,7 @@ class ViewController: UIViewController {
             
             print("[   IMAGE   ]> \(imageOne.getURL())")
             print("[  ORIGIAL  ]> \(imageOne.getURL(original: true))")
-            print("[   96X96   ]> \(imageOne.getURL(thumbnail: cdnStrategy.getCDNThumbnail(width: 96, height: 96) ))")
+            print("[   96X96   ]> \(imageOne.getURL(thumbnail: wideStrategy.getCDNThumbnail(width: 96, height: 96) ))")
             
             print("")
         }
