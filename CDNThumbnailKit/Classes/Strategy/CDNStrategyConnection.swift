@@ -6,72 +6,40 @@
 //
 
 import Foundation
-import Reachability
-import CoreTelephony
 
-public class CDNStrategyConnection: CDNStrategyDefault {
-
-    let reachability = Reachability()!
-    
+public class CDNStrategyConnection: CDNStrategyDefault {    
     
     public override func getCDNThumbnail(width: Int, height: Int) -> CDNThumbnail? {
         var returns : CDNThumbnail?
-        
+
+        returns = super.getCDNThumbnail(width: width, height: height)
+        if (returns != nil) {
+            let size = self.getConnectionSize(width: returns!.width , height: returns!.height)
+            returns!.height = Int(size.height)
+            returns!.width = Int(size.width)
+        }
         return returns
     }
 
     func getConnectionSize(width: Int, height: Int) -> CGSize{
         var size = CGSize()
-        switch self.getRechabilityStatus() {
+        switch NetworkAnalyzer.shared.getRechabilityStatus() {
         case .wifi:
             size = CGSize(width: width, height: height)
         case .cellular:
-            size = CGSize(width: width / 2, height: height / 2)
+            switch NetworkAnalyzer.shared.checkType(){
+            case ._LTE:
+                size = CGSize(width: width * 2 / 3, height: height * 2 / 3)
+            case ._3G:
+                size = CGSize(width: width / 2, height: height / 2)
+            case ._2G:
+                size = CGSize(width: width / 3, height: height / 3)
+            default:
+                break
+            }
         default:
             size = CGSize(width: width / 3, height: height / 3)
         }
         return size
     }
-    
-    
-    func checkType() {
-        let netInfo = CTTelephonyNetworkInfo()
-        
-        guard let connection = netInfo.currentRadioAccessTechnology else {
-            return
-        }
-        
-        switch connection {
-        case CTRadioAccessTechnologyGPRS,
-             CTRadioAccessTechnologyEdge,
-             CTRadioAccessTechnologyCDMA1x:
-            print("2G")
-            return
-        case CTRadioAccessTechnologyWCDMA,
-             CTRadioAccessTechnologyHSDPA,
-             CTRadioAccessTechnologyHSUPA,
-             CTRadioAccessTechnologyeHRPD,
-             CTRadioAccessTechnologyCDMAEVDORev0,
-             CTRadioAccessTechnologyCDMAEVDORevA,
-             CTRadioAccessTechnologyCDMAEVDORevB:
-            print("3G")
-            return
-        case CTRadioAccessTechnologyLTE:
-            print("4G")
-            return
-        default:
-            print("unknow")
-            return
-
-        }
-    }
-    
-    
-    
-    func getRechabilityStatus() -> Reachability.Connection{
-        return self.reachability.connection
-    }
-    
-    
-    
 }
