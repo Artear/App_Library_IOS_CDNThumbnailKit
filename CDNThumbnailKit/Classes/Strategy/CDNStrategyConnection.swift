@@ -7,34 +7,48 @@
 
 import Foundation
 
-public class CDNStrategyConnection: CDNStrategyDefault {    
+public class CDNStrategyConnection: CDNStrategyProtocol {
     
-    public override func getCDNThumbnail(width: Int, height: Int) -> CDNThumbnail? {
+    var strategyDefault : CDNStrategyProtocol!
+    
+    init() {
+        self.strategyDefault = CDNStrategyDefault()
+    }
+    
+    public func getCDNThumbnail(width: Int, height: Int) -> CDNThumbnail? {
         var returns : CDNThumbnail?
         let size = self.getConnectionSize(width: width , height: height)
-        returns = super.getCDNThumbnail(width: Int(size.width), height: Int(size.height))
+        returns = self.strategyDefault.getCDNThumbnail(width: Int(size.width), height: Int(size.height))
         return returns
     }
 
     func getConnectionSize(width: Int, height: Int) -> CGSize{
         var size = CGSize()
-        switch NetworkAnalyzer.shared.getRechabilityStatus() {
-        case .wifi:
+        switch self.networkType() {
+        case ._WIFI:
             size = CGSize(width: width, height: height)
-        case .cellular:
-            switch NetworkAnalyzer.shared.checkType(){
-            case ._LTE:
-                size = CGSize(width: width * 2 / 3, height: height * 2 / 3)
-            case ._3G:
-                size = CGSize(width: width / 2, height: height / 2)
-            case ._2G:
-                size = CGSize(width: width / 3, height: height / 3)
-            default:
-                break
-            }
+        case ._LTE:
+            size = CGSize(width: width * 2 / 3, height: height * 2 / 3)
+        case ._3G:
+            size = CGSize(width: width / 2, height: height / 2)
+        case ._2G:
+            size = CGSize(width: width / 3, height: height / 3)
         default:
             size = CGSize(width: width / 3, height: height / 3)
         }
         return size
     }
+
+    public func add(cdnThumbnail: CDNThumbnail) {
+        self.strategyDefault.add(cdnThumbnail: cdnThumbnail)
+    }
+    
+    public func remove(cdnThumbnail: CDNThumbnail) {
+        self.strategyDefault.remove(cdnThumbnail: cdnThumbnail)
+    }
+    
+    func networkType() -> NetworkAnalyzer.TelephonyNetwork {
+        return NetworkAnalyzer.shared.checkType()
+    }
+
 }
