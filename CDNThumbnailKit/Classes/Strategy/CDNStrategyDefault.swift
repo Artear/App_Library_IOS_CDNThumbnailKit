@@ -9,11 +9,9 @@ import Foundation
 
 public class CDNStrategyDefault: CDNStrategyProtocol {
     private var cdnList: [CDNThumbnail]
-    private var screenScale = UIScreen.main.scale
     
-    public init(scale:CGFloat = UIScreen.main.scale) {
+    public init() {
         self.cdnList = [CDNThumbnail]()
-        self.screenScale = scale
     }
     
     public func add(cdnThumbnail: CDNThumbnail) {
@@ -33,7 +31,7 @@ public class CDNStrategyDefault: CDNStrategyProtocol {
         if cdnList.count != 0 {
             var bestWidthDiff = Int.max
             for cdn in self.cdnList {
-                let diff = Int.abs(cdn.width - width * Int(screenScale))
+                let diff = Int.abs(cdn.width - width * Int(screenScale()))
                 if diff < bestWidthDiff{
                     bestWidthDiff = diff
                     returns = cdn
@@ -41,5 +39,9 @@ public class CDNStrategyDefault: CDNStrategyProtocol {
             }
         }
         return returns
+    }
+    
+    func screenScale() -> CGFloat{
+        return UIScreen.main.scale
     }
 }
