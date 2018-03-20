@@ -16,43 +16,42 @@ public class NetworkAnalyzer {
     private let reachability = Reachability()!
 
     public enum TelephonyNetwork {
+        case _WIFI
         case _LTE
         case _3G
         case _2G
-        case _Unknow
+        case _unknow
     }
 
     public func checkType() ->TelephonyNetwork {
-        let netInfo = CTTelephonyNetworkInfo()
-
-        guard let connection = netInfo.currentRadioAccessTechnology else {
-            return ._Unknow
-        }
-
-        switch connection {
-        case CTRadioAccessTechnologyGPRS,
-             CTRadioAccessTechnologyEdge,
-             CTRadioAccessTechnologyCDMA1x:
-            return ._2G
-        case CTRadioAccessTechnologyWCDMA,
-             CTRadioAccessTechnologyHSDPA,
-             CTRadioAccessTechnologyHSUPA,
-             CTRadioAccessTechnologyeHRPD,
-             CTRadioAccessTechnologyCDMAEVDORev0,
-             CTRadioAccessTechnologyCDMAEVDORevA,
-             CTRadioAccessTechnologyCDMAEVDORevB:
-            return ._3G
-        case CTRadioAccessTechnologyLTE:
-            return ._LTE
+        switch self.reachability.connection {
+        case .wifi:
+            return ._WIFI
+        case .cellular:
+            guard let connection = CTTelephonyNetworkInfo().currentRadioAccessTechnology else {
+                return ._unknow
+            }
+            switch connection {
+            case CTRadioAccessTechnologyGPRS,
+                 CTRadioAccessTechnologyEdge,
+                 CTRadioAccessTechnologyCDMA1x:
+                return ._2G
+            case CTRadioAccessTechnologyWCDMA,
+                 CTRadioAccessTechnologyHSDPA,
+                 CTRadioAccessTechnologyHSUPA,
+                 CTRadioAccessTechnologyeHRPD,
+                 CTRadioAccessTechnologyCDMAEVDORev0,
+                 CTRadioAccessTechnologyCDMAEVDORevA,
+                 CTRadioAccessTechnologyCDMAEVDORevB:
+                return ._3G
+            case CTRadioAccessTechnologyLTE:
+                return ._LTE
+            default:
+                return ._unknow
+            }
         default:
-            return ._Unknow
-
+            return ._unknow
         }
     }
-
-    public func getRechabilityStatus() -> Reachability.Connection{
-        return self.reachability.connection
-    }
-
 }
 
