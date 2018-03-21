@@ -13,10 +13,12 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		7552D7BD2062AFDF003200EB /* UIImageViewURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7552D7BC2062AFDF003200EB /* UIImageViewURL.swift */; };
 		B38B098736AC7E36CD89D563 /* Pods_CDNThumbnailKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73CB4DFC60ED962C850FF9A /* Pods_CDNThumbnailKit_Example.framework */; };
-		E1FAE2621F689BB4006C01B0 /* CDNKalturaThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAE2611F689BB4006C01B0 /* CDNKalturaThumbnail.swift */; };
-		E1FAE2641F689BD7006C01B0 /* CDNThumbnailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAE2631F689BD7006C01B0 /* CDNThumbnailList.swift */; };
+		E160916F20600FCC006CA37A /* CDNKalturaThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160916E20600FCC006CA37A /* CDNKalturaThumbnail.swift */; };
+		E160917120600FE0006CA37A /* CDNArtearThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160917020600FE0006CA37A /* CDNArtearThumbnail.swift */; };
+		E1609172206013AE006CA37A /* CDNArtearThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160917020600FE0006CA37A /* CDNArtearThumbnail.swift */; };
+		E1609174206027FA006CA37A /* CDNThumbnailKitSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1609173206027FA006CA37A /* CDNThumbnailKitSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +44,14 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* CDNThumbnailKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDNThumbnailKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6BBEA1BB09F08103F43F0EFB /* Pods-CDNThumbnailKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Example/Pods-CDNThumbnailKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		7552D7BC2062AFDF003200EB /* UIImageViewURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewURL.swift; sourceTree = "<group>"; };
 		772679F5C2C8029774681F34 /* Pods-CDNThumbnailKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Tests/Pods-CDNThumbnailKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		874C625384874896B7AA24E6 /* Pods-CDNThumbnailKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Example/Pods-CDNThumbnailKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B0DA273E0F673FD3F3890FCE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E1FAE2611F689BB4006C01B0 /* CDNKalturaThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNKalturaThumbnail.swift; sourceTree = "<group>"; };
-		E1FAE2631F689BD7006C01B0 /* CDNThumbnailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNThumbnailList.swift; sourceTree = "<group>"; };
+		E160916E20600FCC006CA37A /* CDNKalturaThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDNKalturaThumbnail.swift; sourceTree = "<group>"; };
+		E160917020600FE0006CA37A /* CDNArtearThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDNArtearThumbnail.swift; sourceTree = "<group>"; };
+		E1609173206027FA006CA37A /* CDNThumbnailKitSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDNThumbnailKitSpec.swift; sourceTree = "<group>"; };
 		E73CB4DFC60ED962C850FF9A /* Pods_CDNThumbnailKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDNThumbnailKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9856D2C5433D578CC81752A /* Pods-CDNThumbnailKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNThumbnailKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDNThumbnailKit_Tests/Pods-CDNThumbnailKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +100,7 @@
 		607FACD21AFB9204008FA782 /* Example for CDNThumbnailKit */ = {
 			isa = PBXGroup;
 			children = (
+				7552D7BB2062AFC5003200EB /* Extensions */,
 				E1FAE25F1F689B93006C01B0 /* CDNThumbnail */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -120,8 +124,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				E1609173206027FA006CA37A /* CDNThumbnailKitSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -142,6 +146,14 @@
 				B0DA273E0F673FD3F3890FCE /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		7552D7BB2062AFC5003200EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7552D7BC2062AFDF003200EB /* UIImageViewURL.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		ABCCCA6B2F277D6C16B909F1 /* Pods */ = {
@@ -167,18 +179,10 @@
 		E1FAE25F1F689B93006C01B0 /* CDNThumbnail */ = {
 			isa = PBXGroup;
 			children = (
-				E1FAE2601F689B93006C01B0 /* Kaltura */,
-				E1FAE2631F689BD7006C01B0 /* CDNThumbnailList.swift */,
+				E160916E20600FCC006CA37A /* CDNKalturaThumbnail.swift */,
+				E160917020600FE0006CA37A /* CDNArtearThumbnail.swift */,
 			);
 			path = CDNThumbnail;
-			sourceTree = "<group>";
-		};
-		E1FAE2601F689B93006C01B0 /* Kaltura */ = {
-			isa = PBXGroup;
-			children = (
-				E1FAE2611F689BB4006C01B0 /* CDNKalturaThumbnail.swift */,
-			);
-			path = Kaltura;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +241,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = CY33TK4JQ8;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = CY33TK4JQ8;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -292,13 +298,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CDNThumbnailKit_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		489958048B424B83FB103F53 /* [CP] Check Pods Manifest.lock */ = {
@@ -307,13 +316,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CDNThumbnailKit_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5C4AF76E177070D90B03BFB2 /* [CP] Copy Pods Resources */ = {
@@ -337,9 +349,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CDNThumbnailKit_Example/Pods-CDNThumbnailKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CDNThumbnailKit/CDNThumbnailKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDNThumbnailKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -352,9 +371,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CDNThumbnailKit_Tests/Pods-CDNThumbnailKit_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -384,9 +408,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				E1FAE2621F689BB4006C01B0 /* CDNKalturaThumbnail.swift in Sources */,
-				E1FAE2641F689BD7006C01B0 /* CDNThumbnailList.swift in Sources */,
+				7552D7BD2062AFDF003200EB /* UIImageViewURL.swift in Sources */,
+				E160916F20600FCC006CA37A /* CDNKalturaThumbnail.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				E160917120600FE0006CA37A /* CDNArtearThumbnail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +419,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				E1609174206027FA006CA37A /* CDNThumbnailKitSpec.swift in Sources */,
+				E1609172206013AE006CA37A /* CDNArtearThumbnail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,12 +546,14 @@
 			baseConfigurationReference = 6BBEA1BB09F08103F43F0EFB /* Pods-CDNThumbnailKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CY33TK4JQ8;
 				INFOPLIST_FILE = CDNThumbnailKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -534,12 +562,14 @@
 			baseConfigurationReference = 874C625384874896B7AA24E6 /* Pods-CDNThumbnailKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CY33TK4JQ8;
 				INFOPLIST_FILE = CDNThumbnailKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -547,6 +577,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E9856D2C5433D578CC81752A /* Pods-CDNThumbnailKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = CY33TK4JQ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -560,6 +591,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDNThumbnailKit_Example.app/CDNThumbnailKit_Example";
 			};
 			name = Debug;
 		};
@@ -567,6 +599,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 772679F5C2C8029774681F34 /* Pods-CDNThumbnailKit_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = CY33TK4JQ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -576,6 +609,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDNThumbnailKit_Example.app/CDNThumbnailKit_Example";
 			};
 			name = Release;
 		};

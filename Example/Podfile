@@ -2,10 +2,11 @@ use_frameworks!
 
 target 'CDNThumbnailKit_Example' do
   pod 'CDNThumbnailKit', :path => '../'
+  pod 'Alamofire'
 
   target 'CDNThumbnailKit_Tests' do
     inherit! :search_paths
-
-    
+    pod 'Quick'
+    pod 'Nimble'
   end
 end

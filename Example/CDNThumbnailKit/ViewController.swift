@@ -8,36 +8,61 @@
 
 import UIKit
 import CDNThumbnailKit
+import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var firstImageView: UIImageView!
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var secondImageView: UIImageView!
+    @IBOutlet weak var secondLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let images:[String] = [
-            "http://vodgc.com/p/107/sp/10700/thumbnail/entry_id/0_4ucbsbhf/width/375/height/212/type/2/bgcolor/000000",
-            "http://vodgc.com/p/107/sp/10700/thumbnail/entry_id/0_cp9nzqzy",
-            "https://vignette.wikia.nocookie.net/rockosmodernlife/images/5/5e/Rocko_Wallaby.png"
-        ]
+        self.loadImages()
         
-        var count = 0
-        for image in images {
-            count+=1
-            print("Image \(count)")
-            let urlOne = URL(string: image)!
-            let imageOne = CDNImage(url: urlOne)
-            
-            print("[   IMAGE   ]> \(imageOne.getURL())")
-            print("[  ORIGIAL  ]> \(imageOne.getURL(original: true))")
-            print("[   96X96   ]> \(imageOne.getURL(thumbnail: CDNThumbnail(width: 96, height: 96, type: .center) ))")
-            
-            print("")
-        }
-
         
     }
 
+    @IBAction func reloadImages(_ sender: Any) {
+        self.loadImages()
+    }
+    
+    
+    func loadImages() {
+        
+        let wideDimension = CDNStrategyConnection()
+        wideDimension.add(cdnThumbnail: CDNThumbnail(width: 153, height: 86, type: .center))
+        wideDimension.add(cdnThumbnail: CDNThumbnail(width: 240, height: 135, type: .center))
+        wideDimension.add(cdnThumbnail: CDNThumbnail(width: 320, height: 180, type: .center))
+        wideDimension.add(cdnThumbnail: CDNThumbnail(width: 375, height: 212, type: .center))
+        wideDimension.add(cdnThumbnail: CDNThumbnail(width: 532, height: 298, type: .center))
+        wideDimension.add(cdnThumbnail: CDNThumbnail(width: 650, height: 365, type: .center))
+        wideDimension.add(cdnThumbnail: CDNThumbnail(width: 760, height: 426, type: .center))
+        wideDimension.add(cdnThumbnail: CDNThumbnail(width: 980, height: 550, type: .center))
+        wideDimension.add(cdnThumbnail: CDNThumbnail(width: 1024, height: 573, type: .center))
+        wideDimension.add(cdnThumbnail: CDNThumbnail(width: 1366, height: 765, type: .center))
+        
+        let image = "http://vodgc.com/p/107/sp/10700/thumbnail/entry_id/0_4ucbsbhf/width/375/height/212/type/2/bgcolor/000000"
+        
+        let imageOne = CDNImage(url: URL(string: image)!)
+        
+        self.firstImageView.image = nil
+        self.secondImageView.image = nil
+
+        self.firstImageView.imageURL(imageOne.getURL().absoluteString)
+        let thumbnail = wideDimension.getCDNThumbnail(width: 532, height: 298)
+        self.secondImageView.imageURL(imageOne.getURL(thumbnail: thumbnail).absoluteString)
+
+        self.firstLabel.text = "Size original: (375, 212)"
+        self.secondLabel.text = "Size strategy: (\(thumbnail!.width), \(thumbnail!.height) \n \(NetworkAnalyzer.shared.checkType()) )"
+
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

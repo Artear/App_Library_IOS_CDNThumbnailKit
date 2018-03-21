@@ -1,6 +1,0 @@
-framework module Pods_CDNThumbnailKit_Example {
-  umbrella header "Pods-CDNThumbnailKit_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
