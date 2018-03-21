@@ -11,7 +11,7 @@ public class CDNStrategyConnection: CDNStrategyProtocol {
     
     var strategyDefault : CDNStrategyProtocol!
     
-    init() {
+    public init() {
         self.strategyDefault = CDNStrategyDefault()
     }
     
