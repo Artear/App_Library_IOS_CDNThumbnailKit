@@ -54,7 +54,7 @@ class CDNKalturaThumbnail: CDNThumbnailProtocol {
             let matches = regex.matches(
                 in: urlBase,
                 options: [],
-                range: NSMakeRange(0,urlBase.characters.count)
+                range: NSMakeRange(0,urlBase.count)
             )
             
             for matche in matches {
@@ -62,13 +62,13 @@ class CDNKalturaThumbnail: CDNThumbnailProtocol {
                 if matche.numberOfRanges > 4 {
                     
                     let urlBaseRegex = [
-                        NSURLBase.substring(with: matche.rangeAt(1)),
+                        NSURLBase.substring(with: matche.range(at: 1)),
                         "vodgc.com/p/",
-                        NSURLBase.substring(with: matche.rangeAt(2)),
+                        NSURLBase.substring(with: matche.range(at: 2)),
                         "/sp/",
-                        NSURLBase.substring(with: matche.rangeAt(3)),
+                        NSURLBase.substring(with: matche.range(at: 3)),
                         "/thumbnail/entry_id/",
-                        NSURLBase.substring(with: matche.rangeAt(4)),
+                        NSURLBase.substring(with: matche.range(at: 4)),
                         (thumbnail != nil ? "/\(thumbnail!)":"")
                     ]
                     

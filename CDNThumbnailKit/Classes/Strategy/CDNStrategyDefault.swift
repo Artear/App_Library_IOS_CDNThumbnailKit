@@ -31,7 +31,7 @@ public class CDNStrategyDefault: CDNStrategyProtocol {
         if cdnList.count != 0 {
             var bestWidthDiff = Int.max
             for cdn in self.cdnList {
-                let diff = Int.abs(cdn.width - width * Int(screenScale()))
+                let diff = abs(cdn.width - width * Int(screenScale()))
                 if diff < bestWidthDiff{
                     bestWidthDiff = diff
                     returns = cdn
